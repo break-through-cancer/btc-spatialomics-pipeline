@@ -1,0 +1,28 @@
+{
+  "form": {
+    "type": "object",
+    "title": "H&E Spatial Heterogeneity Analysis",
+    "description": "Monte Carlo sampling + PCA + Linear Mixed Effects analysis of H&E tissue segmentation probability maps.",
+    "properties": {
+      "input_dir": {
+        "title": "Input Dataset Path",
+        "description": "S3 path to the dataset folder containing *_Probabilities.h5 files. Automatically populated from the selected input dataset — do not edit.",
+        "type": "string"
+      },
+      "output_dir": {
+        "title": "Output Directory",
+        "description": "S3 path where pipeline results will be written. Automatically set by Cirro — do not edit.",
+        "type": "string"
+      }
+    },
+    "required": []
+  },
+  "ui": {
+    "input_dir": {
+      "ui:widget": "hidden"
+    },
+    "output_dir": {
+      "ui:widget": "hidden"
+    }
+  }
+}

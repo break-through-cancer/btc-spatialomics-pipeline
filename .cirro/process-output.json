@@ -1,0 +1,60 @@
+[
+  {
+    "id": "metadata",
+    "name": "Sample Metadata",
+    "description": "Sample-level metadata table: sample name, biopsy, replicate, and file paths.",
+    "path": "metadata.csv",
+    "delimiter": ",",
+    "columns": ["file", "sample", "biopsy", "replicate", "csv"]
+  },
+  {
+    "id": "group_comparisons",
+    "name": "Group Comparisons (LME p-values)",
+    "description": "Linear mixed-effects model p-values comparing biopsy groups across tissue class compositions.",
+    "path": "plots/group_comparisons.csv",
+    "delimiter": ",",
+    "columns": ["pvalue", "comparison", "test"]
+  },
+  {
+    "id": "pca_200um",
+    "name": "PCA Coordinates – 200 µm",
+    "description": "PCA scores for all Monte Carlo ROIs at 200 µm scale, annotated with sample/biopsy metadata.",
+    "path": "plots/pca2/pca_200um.csv",
+    "delimiter": ","
+  },
+  {
+    "id": "pca_100um",
+    "name": "PCA Coordinates – 100 µm",
+    "description": "PCA scores for all Monte Carlo ROIs at 100 µm scale.",
+    "path": "plots/pca2/pca_100um.csv",
+    "delimiter": ","
+  },
+  {
+    "id": "pca_50um",
+    "name": "PCA Coordinates – 50 µm",
+    "description": "PCA scores for all Monte Carlo ROIs at 50 µm scale.",
+    "path": "plots/pca2/pca_50um.csv",
+    "delimiter": ","
+  },
+  {
+    "id": "pca_20um",
+    "name": "PCA Coordinates – 20 µm",
+    "description": "PCA scores for all Monte Carlo ROIs at 20 µm scale.",
+    "path": "plots/pca2/pca_20um.csv",
+    "delimiter": ","
+  },
+  {
+    "id": "loadings_200um",
+    "name": "PCA Loadings – 200 µm",
+    "description": "PCA rotation matrix (loadings) for tissue classes at 200 µm scale.",
+    "path": "plots/pca2/loadings_200um.csv",
+    "delimiter": ","
+  },
+  {
+    "id": "loadings_20um",
+    "name": "PCA Loadings – 20 µm",
+    "description": "PCA rotation matrix (loadings) for tissue classes at 20 µm scale.",
+    "path": "plots/pca2/loadings_20um.csv",
+    "delimiter": ","
+  }
+]
