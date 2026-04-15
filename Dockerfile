@@ -17,7 +17,7 @@
 
 FROM bioconductor/bioconductor_docker:RELEASE_3_14
 
-LABEL maintainer="sarah.andrews.park@gmail.com" \
+LABEL maintainer="siri_palreddy@dfci.harvard.edu" \
       description="H&E tissue heterogeneity analysis pipeline" \
       r.version="4.1.1" \
       bioc.version="3.14"
