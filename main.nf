@@ -59,6 +59,10 @@ process HE_ANALYSIS {
 
     script:
     """
+    echo "=== Staged files in work dir ==="
+    ls -la .
+    echo "================================"
+
     mkdir -p results
 
     Rscript /app/he_hypothesis_testing.R \\
