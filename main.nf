@@ -40,7 +40,7 @@ process HE_ANALYSIS {
 
     tag "HE analysis – ${h5_files.size()} samples"
 
-    container 'he-analysis:latest'
+    container params.container__he_analysis
 
     // Copy all outputs to params.output_dir on the host after the process finishes
     publishDir params.output_dir, mode: 'copy', overwrite: true
