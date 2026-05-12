@@ -90,4 +90,4 @@ WORKDIR /app
 # Nextflow / AWS Batch will append CLI args, e.g.:
 #   --input_dir /data/input --output_dir /data/output
 # -----------------------------------------------------------------------------
-ENTRYPOINT ["Rscript", "/app/he_hypothesis_testing.R"]
+CMD ["Rscript", "/app/he_hypothesis_testing.R"]
