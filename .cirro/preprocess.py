@@ -20,10 +20,17 @@ ds = PreprocessDataset.from_running()
 
 # ---------------------------------------------------------------------------
 # 1. Find all *_Probabilities.h5 files in the input dataset
+#    ds.files is populated for pipeline-output datasets; for custom (manually
+#    uploaded) datasets it may be empty — fall back to ds.manifest in that case.
 # ---------------------------------------------------------------------------
 all_files = ds.files.copy()
-h5_mask   = all_files["file"].str.endswith("_Probabilities.h5")
-h5_files  = all_files.loc[h5_mask, "file"].tolist()
+h5_mask   = all_files["file"].str.endswith("_Probabilities.h5") if len(all_files) > 0 else []
+h5_files  = all_files.loc[h5_mask, "file"].tolist() if len(all_files) > 0 else []
+
+if len(h5_files) == 0:
+    ds.logger.info("ds.files is empty (custom dataset) — falling back to manifest file list.")
+    manifest_files = [f["name"] for f in ds.manifest.get("files", [])]
+    h5_files = [f for f in manifest_files if f.endswith("_Probabilities.h5")]
 
 if len(h5_files) == 0:
     raise ValueError(
